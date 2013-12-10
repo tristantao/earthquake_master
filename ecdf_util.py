@@ -15,7 +15,7 @@ def generate_ecdf_plots():
         print "ECDF generation failed with code %s" % retcode
     return retcode
 
-def show_plot():
+def show_plots():
     import Image
     image = Image.open(os.path.join(HOME_DIR, 'tristan_quakers/ECDF/plot.png' ))
     image.show()
