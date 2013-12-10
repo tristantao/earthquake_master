@@ -9,6 +9,9 @@ import matplotlib
 from mpl_toolkits.basemap import Basemap
 import re
 
+
+pi = 3.14159265359
+
 def get_year(entry):
     a = str(entry["YYYY/MM/DD"])
     b = re.split("\\s+", a)[1]
