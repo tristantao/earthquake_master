@@ -11,7 +11,7 @@ def get_year(entry):
 
 
 def get_plot_res(years):
-    data_dict = cu.grab_data_dict(years[0],years[1],'clean_data/')
+    data_dict = cu.grab_data_dict(years[0],years[1],'tristan_curators/clean_data/')
     quakes = cu.grab_data_frame(data_dict)
 
     max_lat = quakes['LAT'].max()
@@ -46,10 +46,10 @@ def get_colormap(years):
 
 def get_quakes_subset(years, quantity):
     
-    quakes = cu.grab_data_frame(cu.grab_data_dict(years[0],years[0],'clean_data/'))[0:quantity]
+    quakes = cu.grab_data_frame(cu.grab_data_dict(years[0],years[0],'tristan_curators/clean_data/'))[0:quantity]
     
     for year in range(years[0] + 1, years[1] + 1): 
-        data_dict = cu.grab_data_dict(year,year,'clean_data/')
+        data_dict = cu.grab_data_dict(year,year,'tristan_curators/clean_data/')
         df = cu.grab_data_frame(data_dict)[0:quantity]
         quakes = pd.DataFrame.append(quakes, df)
         
