@@ -30,15 +30,6 @@ def show_MDAsub_plot():
     image.show()
 
 
-##########################
-####Important Functions###
-##########################
-setup_repos()
-#curate
-generate_ecdf_plots()
-show_plot()
-
-
 '''
 q_o = quakers_repo.remote.origin
 g = git.cmd.Git(git_dir)
