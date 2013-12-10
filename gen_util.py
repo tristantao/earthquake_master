@@ -40,7 +40,9 @@ def curate():
         print "Raw Curation failed with code %s" % retcode
     else:
         print "Raw Curation complete"
+    return retcode
 
+    '''
     #Now, turn the RawCleanData into DataFrame used by the MDA code.
     retcode2 = os.system("Rscript CleanDataWithRealTime.R %s %s" % (os.path.join(HOME_DIR, "tristan_curators/RawCleanData.csv"), os.path.join(HOME_DIR, "tristan_quakers/ScaledMDA/DataFrame.csv")))
     if retcode2 != 0:
@@ -49,8 +51,8 @@ def curate():
         print "DataFrame created"
     
     return retcode + retcode2
-    
-    return retcode
+    ''' 
+
 
 def prep_env():
     '''
