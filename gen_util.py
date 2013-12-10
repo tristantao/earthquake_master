@@ -35,7 +35,7 @@ def curate():
     Begins the curation process.
     '''
     print "Begining curation"
-    retcode = os.system("cd data-curators; python curate.py")
+    retcode = os.system("cd tristan_curators/; python curate.py")
     if retcode != 0:
         print "Suration failed with code %s" % retcode
     else:
