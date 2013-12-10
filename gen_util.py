@@ -34,10 +34,10 @@ def curate():
     '''
     Begins the curation process.
     '''
-    print "Begining curation"
+    print "Begining raw curation"
     retcode = os.system("cd tristan_curators/; python curate.py")
     if retcode != 0:
-        print "Curation failed with code %s" % retcode
+        print "Raw Curation failed with code %s" % retcode
     else:
         print "Raw Curation complete"
 
