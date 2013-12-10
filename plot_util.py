@@ -4,6 +4,7 @@ import os
 import pandas as pd
 import curate_util as cu
 import numpy as np
+import pylab
 
 def get_year(entry):
     a = str(entry["YYYY/MM/DD"])
