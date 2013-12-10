@@ -6,22 +6,22 @@ HOME_DIR = os.getcwd()
 
 def generate_data_frame():
     '''
-    Uses the curation code and generate a dataframe for MDA plot
+    Uses the curation code and generate a dataframe for MDA plot.
+    Not currently used.
     '''
-
-    retcode = os.system("Rscript CleanDataWithRealTime.R RawCleanData.csv " + os.path.join(HOME_DIR, 'tristan_quakers/ScaledMDA/DataFrame.csv'))
+    retcode = os.system("Rscript CleanDataWithRealTime.R tristan_curatprs/RawCleanData.csv " + os.path.join(HOME_DIR, 'tristan_quakers/ScaledMDA/DataFrame.csv'))
     if retcode == 0:
         print "MDA DataFrame generated!"
     else:
         print "MDA DataFrame generation failed with code %s" % retcode
     return retcode
 
-    
-def generate_ecdf_plots():
+
+def generate_MDA_plots():
     '''
     Utilizes the tristan_quakers/ScaledMDA/ScaledMDA-Presentation.R to genrate the ecdf plots.
     '''
-    retcode = os.system("cd tristan_quakers/ScaledMDA/; Rscript ScaledMDA-Presentation.R " + os.path.join(HOME_DIR, 'tristan_quakers/ScaledMDA'))
+    retcode = os.system("cd tristan_quakers/ScaledMDA/; Rscript ScaledMDA-Presentation.R " + os.path.join(HOME_DIR, 'tristan_curators/RawCleanData.csv'))
     if retcode == 0:
         print "MDA plots generated!"
     else:

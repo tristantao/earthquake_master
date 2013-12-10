@@ -1,3 +1,5 @@
+print ("Begin RawData to RealTimeData conversoin")
+
 args = commandArgs(trailingOnly = TRUE)
 input_data_path = args[1]
 print (input_data_path)
