@@ -6,7 +6,7 @@ import curate_util as cu
 import numpy as np
 import pylab
 import matplotlib
-import mpl_toolkits.basemap.Basemap
+from mpl_toolkits.basemap import Basemap
 
 def get_year(entry):
     a = str(entry["YYYY/MM/DD"])
@@ -59,7 +59,6 @@ def get_quakes_subset(years, quantity):
         
     return quakes
 
-from mpl_toolkits.basemap import Basemap
 
 def plot_quakes(years, figsize, quantity):
     
