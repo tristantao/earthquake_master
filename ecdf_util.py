@@ -8,7 +8,7 @@ def generate_ecdf_plots():
     Utilizes the ECDF/ecdf.R to genrate the ecdf plots.
     '''
     #    retcode = os.system("cd tristan_quakers/ECDF; Rscript ecdf.R " + os.path.join(HOME_DIR, 'tristan_quakers/ECDF/'))
-    retcode = os.system("cd tristan_quakers/ECDF; Rscript improved_ecdf.R " + os.path.join(HOME_DIR, 'tristan_quakers/ECDF/'))
+    retcode = os.system("cd tristan_quakers/ECDF; Rscript ecdf_improved.R " + os.path.join(HOME_DIR, 'tristan_quakers/ECDF/'))
     #print os.getcwd()
     if retcode == 0:
         print "ECDF generated!"
