@@ -41,3 +41,10 @@ def curate():
     else:
         print "Curation complete"
     return retcode
+
+def prep_env():
+    '''
+    Installs the required dependencies
+    rscript, rbase, pandas, scipy,
+    '''
+    pass
