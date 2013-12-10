@@ -56,6 +56,7 @@ def curate():
 
 def prep_env():
     '''
+    new ipython (jinja2)
     Installs the required dependencies
     rscript, rbase, pandas, scipy, 
     R: sfsmisc
