@@ -7,6 +7,7 @@ import numpy as np
 import pylab
 import matplotlib
 from mpl_toolkits.basemap import Basemap
+import re
 
 def get_year(entry):
     a = str(entry["YYYY/MM/DD"])
