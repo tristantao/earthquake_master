@@ -17,17 +17,17 @@ def setup_repos():
         quakers_repo.pull()
         print "tristan_quakers pull complete"
     print "\n.....\n"
-    if not os.path.isdir(os.path.join(os.getcwd(), 'data-curators')):
-        print "Cloning data-curators"
-        git.Git().clone("https://github.com/stat157/data-curators")
+    if not os.path.isdir(os.path.join(os.getcwd(), 'tristan_curators')):
+        print "Cloning tristan_curators"
+        git.Git().clone("https://github.com/tristantao/tristan_curators")
     else:
-        print "data-curators folder already exists, pulling instead"
-        curators_repo = git.cmd.Git('data-curators')
+        print "tristan_curators folder already exists, pulling instead"
+        curators_repo = git.cmd.Git('tristan_curators')
         curators_repo.pull()
-        print "data-curators pull complete"
+        print "tristan_curators pull complete"
 
     #grab the other util code and load it.
-    os.system("cp data-curators/curate_util.py .")
+    os.system("cp tristan_curators/curate_util.py .")
     import curate_util as CU
 
 def curate():

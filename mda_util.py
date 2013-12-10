@@ -4,6 +4,19 @@ import Image
 
 HOME_DIR = os.getcwd()
 
+def generate_data_frame():
+    '''
+    Uses the curation code and generate a dataframe for MDA plot
+    '''
+
+    retcode = os.system("Rscript CleanDataWithRealTime.R RawCleanData.csv " + os.path.join(HOME_DIR, 'tristan_quakers/ScaledMDA/DataFrame.csv'))
+    if retcode == 0:
+        print "MDA DataFrame generated!"
+    else:
+        print "MDA DataFrame generation failed with code %s" % retcode
+    return retcode
+
+    
 def generate_ecdf_plots():
     '''
     Utilizes the tristan_quakers/ScaledMDA/ScaledMDA-Presentation.R to genrate the ecdf plots.
