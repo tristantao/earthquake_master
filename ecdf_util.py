@@ -16,8 +16,9 @@ def generate_ecdf_plots():
     return retcode
 
 def show_plots():
-    import Image
-    image = Image.open(os.path.join(HOME_DIR, 'tristan_quakers/ECDF/plot.png' ))
+    #import Image
+    from IPython.core.display import Image
+    image = Image.open(os.path.join(HOME_DIR, 'tristan_quakers/ECDF/plot.png'))
     image.show()
 
 
