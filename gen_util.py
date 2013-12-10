@@ -45,6 +45,7 @@ def curate():
 def prep_env():
     '''
     Installs the required dependencies
-    rscript, rbase, pandas, scipy,
+    rscript, rbase, pandas, scipy, 
+    R: sfsmisc
     '''
     pass
