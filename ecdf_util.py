@@ -18,8 +18,9 @@ def generate_ecdf_plots():
 def show_plots():
     #import Image
     from IPython.core.display import Image
-    image = Image.open(os.path.join(HOME_DIR, 'tristan_quakers/ECDF/plot.png'))
-    image.show()
+    Image(filename=os.path.join(HOME_DIR, 'tristan_quakers/ECDF/plot.png')) 
+    #image = Image.open(os.path.join(HOME_DIR, 'tristan_quakers/ECDF/plot.png'))
+    #image.show()
 
 
 '''
