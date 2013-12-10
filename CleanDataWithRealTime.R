@@ -6,7 +6,7 @@ output_data_path =args[2]
 print (output_data_path)
 
 
-cleandata <-read.csv(intput_data_path)
+cleandata <-read.csv(input_data_path)
 
 numbers <- c(1:nrow(cleandata))
 long <-cleandata[["LON"]]
