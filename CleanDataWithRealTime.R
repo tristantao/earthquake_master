@@ -3,7 +3,7 @@ input_data_path = args[1]
 print (input_data_path)
 
 output_data_path =args[2]
-prit (output_data_path)
+print (output_data_path)
 
 
 cleandata <-read.csv(intput_data_path)
