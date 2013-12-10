@@ -11,8 +11,8 @@ def get_year(entry):
 
 
 def get_plot_res(years):
-    data_dict = grab_data_dict(years[0],years[1],'clean_data/')
-    quakes = grab_data_frame(data_dict)
+    data_dict = cu.grab_data_dict(years[0],years[1],'clean_data/')
+    quakes = cu.grab_data_frame(data_dict)
 
     max_lat = quakes['LAT'].max()
     min_lat = quakes['LAT'].min()
@@ -46,11 +46,11 @@ def get_colormap(years):
 
 def get_quakes_subset(years, quantity):
     
-    quakes = grab_data_frame(grab_data_dict(years[0],years[0],'clean_data/'))[0:quantity]
+    quakes = cu.grab_data_frame(cu.grab_data_dict(years[0],years[0],'clean_data/'))[0:quantity]
     
     for year in range(years[0] + 1, years[1] + 1): 
-        data_dict = grab_data_dict(year,year,'clean_data/')
-        df = grab_data_frame(data_dict)[0:quantity]
+        data_dict = cu.grab_data_dict(year,year,'clean_data/')
+        df = cu.grab_data_frame(data_dict)[0:quantity]
         quakes = pd.DataFrame.append(quakes, df)
         
     return quakes
