@@ -7,7 +7,8 @@ def generate_ecdf_plots():
     '''
     Utilizes the ECDF/ecdf.R to genrate the ecdf plots.
     '''
-    retcode = os.system("cd tristan_quakers/ECDF; Rscript ecdf.R " + os.path.join(HOME_DIR, 'tristan_quakers/ECDF/'))
+    #    retcode = os.system("cd tristan_quakers/ECDF; Rscript ecdf.R " + os.path.join(HOME_DIR, 'tristan_quakers/ECDF/'))
+    retcode = os.system("cd tristan_quakers/ECDF; Rscript improved_ecdf.R " + os.path.join(HOME_DIR, 'tristan_quakers/ECDF/'))
     #print os.getcwd()
     if retcode == 0:
         print "ECDF generated!"
@@ -16,11 +17,11 @@ def generate_ecdf_plots():
     return retcode
 
 def show_plots():
-    #import Image
-    from IPython.core.display import Image
-    Image(filename=os.path.join(HOME_DIR, 'tristan_quakers/ECDF/plot.png')) 
-    #image = Image.open(os.path.join(HOME_DIR, 'tristan_quakers/ECDF/plot.png'))
-    #image.show()
+    import Image
+    #from IPython.core.display import Image
+    #Image(filename=os.path.join(HOME_DIR, 'tristan_quakers/ECDF/plot.png'))
+    image = Image.open(os.path.join(HOME_DIR, 'tristan_quakers/ECDF/plot.png'))
+    image.show()
 
 
 '''
