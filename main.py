@@ -39,7 +39,7 @@ catalog_dict = CU.grab_data_dict(1999,1999, 'data-curators/clean_data/')
 #df_250 = data_frame.ix[rows]
 #df_250.to_csv(os.path.join(os.getcwd(), "250.csv"), index = False)
 
-retcode = os.system("cd tristan_quakers/ECDF; rscript ecdf.r " + os.path.join(os.getcwd(), 'tristan_quakers/ECDF/'))
+retcode = os.system("cd tristan_quakers/ECDF; Rscript ecdf.R " + os.path.join(os.getcwd(), 'tristan_quakers/ECDF/'))
 #print os.getcwd()
 print retcode
 print "DONE!"
