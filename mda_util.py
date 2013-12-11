@@ -22,6 +22,7 @@ def generate_MDA_plots():
     Utilizes the tristan_quakers/ScaledMDA/ScaledMDA-Presentation.R to genrate the ecdf plots.
     '''
     #retcode = os.system("cd tristan_quakers/ScaledMDA/; Rscript ScaledMDA-Presentation.R " + os.path.join(HOME_DIR, 'tristan_curators/RawCleanData.csv'))
+    print "Starting MDA plot generation via MDAs-final.R"
     retcode = os.system("cd tristan_quakers/ScaledMDA/; Rscript MDAs-final.R " + os.path.join(HOME_DIR, 'tristan_curators/RawCleanData.csv'))
     if retcode == 0:
         print "MDA plots generated!"
