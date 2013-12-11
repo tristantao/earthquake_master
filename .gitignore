@@ -1,0 +1,8 @@
+# Compiled source #
+###################
+*.pyc
+
+# In-Progress #
+###############
+*.py~
+
